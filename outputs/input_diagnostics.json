@@ -1,0 +1,106 @@
+{
+  "period": "2024-Q4",
+  "functional_currency": "USD",
+  "source_file_sha256": {
+    "chart_of_accounts.csv": "1139711bd276b2d443ab83b9a6461b3e1f62a26416962b0dcd0e0762028e49bf",
+    "fx_rates.csv": "268c9b9b5a14ea5533e596ed8872f1c3b5515c92a46c9b197a10ef9f909d1893",
+    "manual_adjustments.json": "26fcad0c0c7bda5306efea47e0c73238b2828b5d30afdd1bb0d54bb6a6704a0f",
+    "prior_period_tb.csv": "aa1439622935eadb08ec1d0911c0c2f207fd9e71d32479326f5714a4c4180595",
+    "trial_balance.csv": "6a5d38f4a7792e5a749d62ec34be8c2aa29f540ccf3c95caedf3e1f1b5203ca8"
+  },
+  "counts": {
+    "coa": 72,
+    "tb": 62,
+    "prior_tb": 33,
+    "fx_rates": 7,
+    "journal_entries": 10
+  },
+  "raw_tb_totals_untranslated": {
+    "debit": "71072200.00",
+    "credit": "71077000.00",
+    "debit_minus_credit": "-4800.00"
+  },
+  "raw_prior_tb_totals_untranslated": {
+    "debit": "35177800.00",
+    "credit": "32345000.00",
+    "debit_minus_credit": "2832800.00"
+  },
+  "warning": "Raw TB totals mix USD/EUR/GBP and are diagnostic only, not functional-currency reconciliation. Prior TB may have different scope (balance sheet only).",
+  "issues": [
+    {
+      "code": "TB_ORPHAN",
+      "severity": "BLOCK",
+      "detail": "Account 9999 (Suspense - Unmapped) absent from COA",
+      "source_rows": [
+        "trial_balance.csv:63"
+      ]
+    },
+    {
+      "code": "TB_REPEATED_CODE",
+      "severity": "INFO",
+      "detail": "1110 appears 3 times; distinguish multi-currency from repeated same-currency rows",
+      "source_rows": [
+        "trial_balance.csv:2",
+        "trial_balance.csv:3",
+        "trial_balance.csv:4"
+      ]
+    },
+    {
+      "code": "TB_REPEATED_CODE",
+      "severity": "INFO",
+      "detail": "6310 appears 2 times; distinguish multi-currency from repeated same-currency rows",
+      "source_rows": [
+        "trial_balance.csv:48",
+        "trial_balance.csv:49"
+      ]
+    },
+    {
+      "code": "PRIOR_UNMAPPED",
+      "severity": "BLOCK",
+      "detail": "Prior-period account 6905 missing in current COA",
+      "source_rows": [
+        "prior_period_tb.csv:34"
+      ]
+    },
+    {
+      "code": "AMBIGUOUS_CF",
+      "severity": "REVIEW",
+      "detail": "Account 1150 needs cash-flow classification",
+      "source_rows": [
+        "chart_of_accounts.csv:10"
+      ]
+    },
+    {
+      "code": "EMPTY_COA_HEADER",
+      "severity": "REVIEW",
+      "detail": "Header 1290 has no children",
+      "source_rows": [
+        "chart_of_accounts.csv:19"
+      ]
+    },
+    {
+      "code": "AMBIGUOUS_CF",
+      "severity": "REVIEW",
+      "detail": "Account 2170 needs cash-flow classification",
+      "source_rows": [
+        "chart_of_accounts.csv:28"
+      ]
+    },
+    {
+      "code": "COA_PARENT_TYPE",
+      "severity": "REVIEW",
+      "detail": "Account 8000 is a parent but typed Expense rather than Header",
+      "source_rows": [
+        "chart_of_accounts.csv"
+      ]
+    },
+    {
+      "code": "FX_MISSING_END_RATE",
+      "severity": "BLOCK",
+      "detail": "No 2024-Q4 period_end rate for GBP",
+      "source_rows": [
+        "fx_rates.csv"
+      ]
+    }
+  ]
+}

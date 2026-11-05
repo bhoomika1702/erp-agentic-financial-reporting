@@ -1,1 +1,123 @@
-
+{
+  "schema_version": "1.0",
+  "coa_duplicate_codes": [],
+  "results": [
+    {
+      "entry_id": "JE-001",
+      "status": "ACCEPTED",
+      "debits": "850000.0",
+      "credits": "850000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "cf964d2f99a6695b1d9f0e7763e435aeca67dd1e904611fcd96bfab4095ff9b7"
+    },
+    {
+      "entry_id": "JE-002",
+      "status": "REJECTED",
+      "debits": "28500.0",
+      "credits": "25000.0",
+      "difference": "3500.0",
+      "issues": [
+        "UNBALANCED_ENTRY"
+      ],
+      "warnings": [],
+      "explanation": "Total debits do not equal total credits; correct the source journal before posting.",
+      "trace_hash": "4bbec1fabfef9775e06cf4a1544f4d779f2bc8c5c51e1597a4167a7c7a482983"
+    },
+    {
+      "entry_id": "JE-003",
+      "status": "ACCEPTED",
+      "debits": "11200.0",
+      "credits": "11200.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "91480ba5f1841f53594686af4796cea8a1104360aa08d25a600b1fd01f584402"
+    },
+    {
+      "entry_id": "JE-004",
+      "status": "ACCEPTED",
+      "debits": "45000.0",
+      "credits": "45000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "bc9912724f66c36023cd86a6155429e6038032d0b6d011227cf1541194dc24ff"
+    },
+    {
+      "entry_id": "JE-005",
+      "status": "REJECTED",
+      "debits": "18500.0",
+      "credits": "18500.0",
+      "difference": "0.0",
+      "issues": [
+        "UNKNOWN_ACCOUNT:1:6315"
+      ],
+      "warnings": [],
+      "explanation": "Account on line 1 is absent from the COA; request an approved mapping.",
+      "trace_hash": "b1eb8fd5b507045c19a55645425b827ba162707a0ac8a39eb8de26ac12fc5620"
+    },
+    {
+      "entry_id": "JE-006",
+      "status": "ACCEPTED",
+      "debits": "215000.0",
+      "credits": "215000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "690b20a05ba96efcdf1994c37fb9381f0ef07f94db6a8b176c68cd07321b4f58"
+    },
+    {
+      "entry_id": "JE-007",
+      "status": "ACCEPTED",
+      "debits": "38000.0",
+      "credits": "38000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "f6e1270a208258661658aeb667925e9a08bd8e8f60dd82baa937f807862b20c5"
+    },
+    {
+      "entry_id": "JE-008",
+      "status": "REVIEW",
+      "debits": "320000.0",
+      "credits": "320000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [
+        "INTERCOMPANY_REVIEW_REQUIRED: verify entity/counterparty and elimination graph",
+        "SAME_ACCOUNT_OFFSET: debit and credit cancel on the same account; verify intent"
+      ],
+      "explanation": "Manual review needed: INTERCOMPANY_REVIEW_REQUIRED: verify entity/counterparty and elimination graph; SAME_ACCOUNT_OFFSET: debit and credit cancel on the same account; verify intent",
+      "trace_hash": "2a9648db1858e07aa63d1a349f8261861fd3670fb2305fb0eb1ed7a30fe342e4"
+    },
+    {
+      "entry_id": "JE-009",
+      "status": "ACCEPTED",
+      "debits": "75000.0",
+      "credits": "75000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "3dde0992584250aa7454be2a13bacd91a941d508f0ab91247b11d88fc502b8c4"
+    },
+    {
+      "entry_id": "JE-010",
+      "status": "ACCEPTED",
+      "debits": "200000.0",
+      "credits": "200000.0",
+      "difference": "0.0",
+      "issues": [],
+      "warnings": [],
+      "explanation": "All implemented journal-level checks passed; this is not approval to post.",
+      "trace_hash": "5f7500396b92ed6f4c75ad3d115e2e75566d7aee6fcdcbcebd7909e134898ead"
+    }
+  ]
+}
